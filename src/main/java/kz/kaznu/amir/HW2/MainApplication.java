@@ -35,13 +35,13 @@ public class MainApplication {
             half2 = new int[size/2]; }
         else {
             half1 = new int[size/2 + 1];
-            half2 = new int[size/2 + 1];
+            half2 = new int[size/2];
         }
-        for (int k = 0; k <=size/2 ; k++) {
+        for (int k = 0; k < half1.length ; k++) {
             half1 [k] = arr1 [k] - chislo;
 
         }
-        for (int j = 0; j <= size/2; j++) {
+        for (int j = 0; j < half2.length; j++) {
             half2 [j] = arr1 [size - 1 - j] - chislo;
 
         }
@@ -51,7 +51,7 @@ public class MainApplication {
         System.out.println(Arrays.toString(half2));
         int sumhalf1 = 0;
         int sumhalf2 = 0;
-        for (int l = 0; l <= size/2; l++) {
+        for (int l = 0; l < half2.length; l++) {
             sumhalf1 += half1[l];
             sumhalf2 += half2[l];
 
