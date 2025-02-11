@@ -1,73 +1,73 @@
 package kz.kaznu.amir.HW2;
-import java.util.Scanner;
 import java.util.Arrays;
 
 public class MainApplication {
-    public static void main(String[] args) {
+    public static void printSentence (int count, String sentence) {
+        for (int i = 0; i < count; i++) {
+            System.out.println(sentence);
+        }
+    }
+
+    public static void sumOf5 (int[] array5) {
         int sum = 0;
-        Scanner scm1 = new Scanner(System.in);
-        System.out.println("Введите размер массива:");
-        int size = scm1.nextInt();
-        int[] arr1 = new int[size];
-        for (int i = 0; i < size; i++) {
-            Scanner scm11 = new Scanner(System.in);
-            System.out.println("Введите элемент массива:");
-            arr1 [i] = scm11.nextInt();
-            if (arr1 [i] > 5) {
-                sum += arr1 [i];
+        for (int i = 0; i < array5.length; i++) {
+            if (array5 [i] > 5) {
+                sum += array5 [i];
             }
+
         }
-        System.out.println("Ваш массив");
-        System.out.println(Arrays.toString(arr1));
-        System.out.println("Сумма элементов больших 5:");
         System.out.println(sum);
-        Scanner plus = new Scanner(System.in);
-        System.out.println("На какое число вы бы хотели увеличить каждый элемент массива?");
-        int chislo = plus.nextInt();
-        for (int m = 0; m < size; m++) {
-            arr1 [m] += chislo;
-        }
-        System.out.println(Arrays.toString(arr1));
-        int[] half1;
-        int[] half2;
-        if (size%2==0) {
-            half1 = new int[size/2];
-            half2 = new int[size/2]; }
-        else {
-            half1 = new int[size/2 + 1];
-            half2 = new int[size/2];
-        }
-        for (int k = 0; k < half1.length ; k++) {
-            half1 [k] = arr1 [k] - chislo;
+    }
 
+    public static void fillArr (int number, int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            arr [i] = number;
         }
-        for (int j = 0; j < half2.length; j++) {
-            half2 [j] = arr1 [size - 1 - j] - chislo;
+        System.out.println(Arrays.toString(arr));
+    }
 
+    public static void plusChislo (int chislo, int[] arr){
+            for (int i = 0; i < arr.length; i++) {
+                arr[i] += chislo;
+            }
+        System.out.println(Arrays.toString(arr));
         }
-        System.out.println("Первая половина массива:");
-        System.out.println(Arrays.toString(half1));
-        System.out.println("Вторая половина массива:");
-        System.out.println(Arrays.toString(half2));
+
+    public static void compareHalf (int[] arr) {
+        int mid = arr.length/2;
         int sumhalf1 = 0;
         int sumhalf2 = 0;
-        for (int l = 0; l < half2.length; l++) {
-            sumhalf1 += half1[l];
-            sumhalf2 += half2[l];
-
+        for (int i = 0; i < mid; i++) {
+            sumhalf1 += arr[i];
 
         }
-        if (sumhalf1>sumhalf2) {
-            System.out.println("Первая половина больше");
+        for (int i = 0; i < arr.length; i++) {
+            sumhalf2 += arr[i];
 
         }
-        else if (sumhalf2>sumhalf1) {
-            System.out.println("Вторая половина больше");
-
+        if (sumhalf1 > sumhalf2) {
+            System.out.println("первая половина больше");
+        }
+        else if (sumhalf2 > sumhalf1) {
+            System.out.println("вторая половина больше");
         }
         else {
-            System.out.println("Половины равны");
+            System.out.println("половины равны");
         }
+    }
+
+
+    public static void main(String[] args) {
+        printSentence(5, "Hello");
+        int[] array = {1, 2, 3, 4, 5};
+        int[] arrFill = {1, 2, 3, 4, 5};
+        sumOf5(array);
+        fillArr(4, arrFill);
+        plusChislo(4, array);
+        compareHalf(array);
+
+
+
     }
 
 }
