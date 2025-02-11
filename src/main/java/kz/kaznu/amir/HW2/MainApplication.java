@@ -37,14 +37,16 @@ public class MainApplication {
         int mid = arr.length/2;
         int sumhalf1 = 0;
         int sumhalf2 = 0;
+        int sumofall = 0;
         for (int i = 0; i < mid; i++) {
             sumhalf1 += arr[i];
 
         }
         for (int i = 0; i < arr.length; i++) {
-            sumhalf2 += arr[i];
+            sumofall += arr[i];
 
         }
+        sumhalf2 = sumofall - sumhalf1;
         if (sumhalf1 > sumhalf2) {
             System.out.println("первая половина больше");
         }
@@ -59,7 +61,7 @@ public class MainApplication {
 
     public static void main(String[] args) {
         printSentence(5, "Hello");
-        int[] array = {1, 2, 3, 4, 5};
+        int[] array = {1, 2, 2, 1};
         int[] arrFill = {1, 2, 3, 4, 5};
         sumOf5(array);
         fillArr(4, arrFill);
