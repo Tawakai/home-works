@@ -32,7 +32,7 @@ public class Animal {
         else {
             endurance -= distance;
             int time = distance/speedOfSwimming;
-            System.out.println("Животное проплыло метров:" + distance + " за " + time + " секунд");
+            System.out.println("Животное проплыло метров :" + distance + " за " + time + " секунд");
             System.out.println("У животного осталось выносливости:" + endurance);
             return time;
         }
