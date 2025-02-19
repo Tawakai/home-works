@@ -2,6 +2,20 @@ package kz.kaznu.amir.HW4;
 
 public class MainApplication {
     public static void main(String[] args) {
+        example2();
+    }
+
+    public static void example2() {
+        Box box = new Box ("10x10x10", "red");
+        box.info();
+        box.itemInIt();
+        box.open();
+        box.info();
+        box.itemInIt();
+        box.info();
+    }
+
+    public static void example1(){
         User[] user = new User[10];
         user[0] = new User("Hernandez", "Rodrigo", "Cascante", 1996, "rodri@gmail.com");
         user[1] = new User("Messi", "Lionel", "Andres", 1987, "barca@icloud.com");
@@ -19,16 +33,6 @@ public class MainApplication {
                 user[i].info();
             }
         }
-        Box box = new Box ("10x10x10", "red");
-        box.info();
-        box.itemInIt();
-        box.open();
-        box.info();
-        box.itemInIt();
-        box.info();
-
-
-
     }
 
 }
