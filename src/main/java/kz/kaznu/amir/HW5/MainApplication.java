@@ -14,6 +14,8 @@ public class MainApplication {
         horse.swim(1);
         dog.run(8);
         dog.swim(3);
+        dog.info();
+        horse.info();
 
     }
 
