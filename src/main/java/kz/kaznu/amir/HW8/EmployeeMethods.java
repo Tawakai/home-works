@@ -13,7 +13,7 @@ public class EmployeeMethods {
         employees.add(new Employee("Brian", 6));
         System.out.println(getTheirNames(employees));
         System.out.println(findOldEnough(employees, 15));
-        System.out.println(areTheyOldEnough(employees, 20));
+        System.out.println(areTheyOldEnough(employees, 22));
         System.out.println(findYoungestEmployee(employees));
     }
 
