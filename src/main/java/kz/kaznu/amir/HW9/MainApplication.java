@@ -13,6 +13,7 @@ public class MainApplication {
         phoneBook.add("Dima", 8777123);
         phoneBook.add("Dima", 8702123);
         phoneBook.add("Roma", 8777456);
+        phoneBook.add("Roma", 8777456);
         System.out.println(phoneBook.containsPhoneNumbers(8777123));
         System.out.println(phoneBook.containsPhoneNumbers(123));
         System.out.println(phoneBook.find("Dima"));
